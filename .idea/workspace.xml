@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86726266-0ac9-4052-9274-9a1b65eee8b8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinNotebook.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.chatapp.demo.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wechat.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ConversationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ConversationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/MessageController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/MessageController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ParticipantController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ParticipantController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/userController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/userController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/websocketcontroller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/websocketcontroller.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation_partcipant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation_partcipant.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message_text.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message_text.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversatioParticipantRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversatioParticipantRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversationRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversationRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/MessageRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/MessageRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/UserRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/UserRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/ConversationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/ConversationService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/UserService.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/chatapp">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/chatapp/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/chatapp">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="chatapp" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/chatapp" gradleHome="C:\Users\Younes\.gradle\wrapper\dists\gradle-8.14.3-bin\cv11ve7ro1n3o1j4so8xd9n66\gradle-8.14.3" javaHome="C:\Program Files\Microsoft\jdk-17.0.16.8-hotspot" gradleVersion="8.14.3" />
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34J0sLdhK0ropFG4AUU5sFSKxVw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build chatapp.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.chatapp [:com.chatapp.demo.FirebaseTestKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.14.1&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projet/wechat&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Younes\Downloads\demo\chatapp\src\main\resources\static\libs" />
+      <recent name="C:\Users\Younes\Downloads\demo\chatapp\src\main\resources\static" />
+      <recent name="C:\Users\Younes\Downloads\demo\chatapp\src\main\kotlin\com\chatapp\demo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projet\wechat\chatapp\.gradle" />
+      <recent name="C:\projet\wechat\chatapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="FirebaseTestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chatapp.demo.FirebaseTestKt" />
+      <module name="com.chatapp.demo.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chatapp.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chatapp.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.FirebaseTestKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86726266-0ac9-4052-9274-9a1b65eee8b8" name="Changes" comment="" />
+      <created>1760916573154</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760916573154</updated>
+      <workItem from="1760916575298" duration="169000" />
+      <workItem from="1760980740387" duration="2976000" />
+      <workItem from="1761065183780" duration="6727000" />
+      <workItem from="1761164149255" duration="7193000" />
+      <workItem from="1761177034488" duration="864000" />
+      <workItem from="1761177919087" duration="778000" />
+      <workItem from="1761178716623" duration="2107000" />
+      <workItem from="1761180864248" duration="777000" />
+      <workItem from="1761181686610" duration="780000" />
+      <workItem from="1761182799499" duration="1723000" />
+      <workItem from="1761217012058" duration="4228000" />
+      <workItem from="1761236991001" duration="4689000" />
+      <workItem from="1761243340099" duration="21974000" />
+      <workItem from="1761306701818" duration="22508000" />
+      <workItem from="1761383412603" duration="38627000" />
+      <workItem from="1761479674765" duration="36499000" />
+      <workItem from="1761568181981" duration="8100000" />
+      <workItem from="1761744666008" duration="29668000" />
+      <workItem from="1761822140744" duration="41305000" />
+      <workItem from="1761906809028" duration="47948000" />
+      <workItem from="1762003510987" duration="10099000" />
+      <workItem from="1762034553499" duration="385000" />
+      <workItem from="1762035083138" duration="773000" />
+      <workItem from="1762036690748" duration="2224000" />
+      <workItem from="1762040462751" duration="6235000" />
+      <workItem from="1762085748402" duration="23081000" />
+      <workItem from="1762120837298" duration="10339000" />
+      <workItem from="1762173074166" duration="2005000" />
+      <workItem from="1762243231052" duration="13234000" />
+      <workItem from="1762296480747" duration="7029000" />
+      <workItem from="1762303884465" duration="7419000" />
+      <workItem from="1762311634248" duration="484000" />
+      <workItem from="1762312131372" duration="3443000" />
+      <workItem from="1762315660076" duration="1281000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

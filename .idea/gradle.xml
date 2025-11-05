@@ -5,16 +5,13 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/chatapp" />
-        <option name="gradleJvm" value="valhalla-ea-23" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/chatapp" />
+            <option value="$PROJECT_DIR$/chatapp/app" />
           </set>
         </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/chatapp/gradle" />
-        <option name="gradleJvm" value="valhalla-ea-23" />
       </GradleProjectSettings>
     </option>
   </component>

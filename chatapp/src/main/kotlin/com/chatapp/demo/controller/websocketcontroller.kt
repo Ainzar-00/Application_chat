@@ -10,6 +10,13 @@ import org.springframework.stereotype.Controller
 import java.time.LocalDateTime
 
 
+/**
+ * Représente un message envoyé par un client via WebSocket.
+ * @property conversationId identifiant de la conversation ciblée.
+ * @property senderId identifiant de l'utilisateur émetteur (doit correspondre à l'utilisateur authentifié).
+ * @property content contenu textuel du message.
+ * @property timestamp horodatage en millisecondes côté client (valeur par défaut : maintenant).
+ */
 data class ChatMessage(
     val conversationId: Int,
     val senderId: Int,
@@ -17,6 +24,16 @@ data class ChatMessage(
     val timestamp: Long = System.currentTimeMillis()
 )
 
+/**
+ * Représente la réponse diffusée aux abonnés d'une conversation après sauvegarde du message.
+ * Cette structure contient les informations utile côté client pour afficher le message.
+ * @property id identifiant du message persisté.
+ * @property conversationId identifiant de la conversation.
+ * @property senderId identifiant de l'expéditeur.
+ * @property senderName nom d'affichage de l'expéditeur.
+ * @property content contenu textuel du message.
+ * @property timestamp date et heure de création côté serveur.
+ */
 data class MessageResponse(
     val id: Int,
     val conversationId: Int,
@@ -26,6 +43,21 @@ data class MessageResponse(
     val timestamp: LocalDateTime
 )
 
+/**
+ * Contrôleur WebSocket responsable de la réception des messages entrants
+ * et de la diffusion vers les topics appropriés.
+ *
+ * Le contrôleur :
+ * 1. Vérifie que l'utilisateur est authentifié et que l'ID d'expéditeur transmis
+ *    correspond à l'utilisateur connecté.
+ * 2. Persiste le message via [ConversationService].
+ * 3. Récupère les informations de l'utilisateur via [UserService].
+ * 4. Diffuse le message persisté sur le topic `/topic/conversation/{conversationId}`.
+ *
+ * @property messagingTemplate composant Spring pour envoyer des messages STOMP/WebSocket.
+ * @property messageService service métier pour gérer les messages/conversations.
+ * @property userService service métier pour récupérer les informations utilisateur.
+ */
 @Controller
 class WebSocketController(
     private val messagingTemplate: SimpMessagingTemplate,
@@ -34,9 +66,20 @@ class WebSocketController(
 ) {
 
     /**
-     * Receives messages from clients at /app/chat.send
-     * and broadcasts to /topic/conversation/{conversationId}
+     * Point d'entrée pour les messages envoyés par les clients.
+     * Les clients publient sur l'endpoint `/app/chat.send` (routing côté STOMP).
+     * Cette méthode :
+     * - récupère l'utilisateur authentifié depuis [SimpMessageHeaderAccessor],
+     * - valide la correspondance entre l'utilisateur authentifié et le champ `senderId` du message,
+     * - enregistre le message en base,
+     * - construit une [MessageResponse] et la diffuse sur le topic `/topic/conversation/{conversationId}`.
+     *
+     * @param message objet reçu depuis le client contenant le contenu et les métadonnées.
+     * @param headerAccessor accesseur aux en-têtes / principal de la connexion WebSocket.
+     * @throws IllegalStateException si l'utilisateur n'est pas authentifié ou si la sauvegarde échoue.
+     * @throws IllegalArgumentException si l'utilisateur tente d'envoyer un message au nom d'un autre utilisateur.
      */
+
     @MessageMapping("/chat.send")
     fun sendMessage(
         @Payload message: ChatMessage,
@@ -118,7 +161,11 @@ class WebSocketController(
     }
 
     /**
-     * Send a private message to a specific user
+     * Envoie un message privé à un utilisateur spécifique.
+     * Cette méthode utilise la destination `/queue/user/{userId}` ; l'utilisateur
+     * doit être abonné à cette queue pour recevoir le message privé.
+     * @param userId identifiant de l'utilisateur destinataire.
+     * @param message payload à envoyer.
      */
     fun sendPrivateMessage(userId: Int, message: Any) {
         messagingTemplate.convertAndSend("/queue/user/$userId", message)

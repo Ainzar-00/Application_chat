@@ -7,12 +7,30 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+/**
+ * Contrôleur REST pour gérer les conversations.
+ *
+ * Les endpoints permettent de :
+ * - Créer des conversations privées ou de groupe
+ * - Récupérer des conversations par ID ou par utilisateur
+ * - Rechercher des utilisateurs
+ * - Gérer les participants (bloquer, débloquer, supprimer)
+ * - Mettre à jour le nom d'un groupe
+ *
+ * La session HTTP est utilisée pour identifier l'utilisateur courant.
+ */
 @RestController
 @RequestMapping("/api/conversations")
 class ConversationController(
     private val conversationService: ConversationService
 ) {
 
+    /**
+     * Crée une conversation privée entre l'utilisateur courant et un autre utilisateur.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @param request contient l'ID de l'autre utilisateur et un nom personnalisé optionnel
+     * @return ResponseEntity avec ApiResponse contenant les informations de la conversation créée
+     */
     @PostMapping("/private")
     fun createPrivateConversation(
         servletReq: HttpServletRequest,
@@ -40,6 +58,9 @@ class ConversationController(
             .body(ApiResponse(true, "Private conversation created successfully", response))
     }
 
+    /**
+     * Crée une conversation de groupe.
+     */
     @PostMapping("/group")
     fun createGroupConversation(
         servletReq: HttpServletRequest,
@@ -66,6 +87,9 @@ class ConversationController(
             .body(ApiResponse(true, "Group conversation created successfully", response))
     }
 
+    /**
+     * Récupère une conversation par son ID.
+     */
     @GetMapping("/{id}")
     fun getConversationById(@PathVariable id: Int): ResponseEntity<ApiResponse<ConversationResponse>> {
         val conversation = conversationService.getConversationById(id)
@@ -81,6 +105,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "Conversation retrieved successfully", response))
     }
 
+    /**
+     * Recherche des utilisateurs par nom, email ou téléphone.
+     */
     @GetMapping("/search/users")
     fun searchUsers(@RequestParam query: String): ResponseEntity<ApiResponse<List<UserResponse>>> {
         val users = conversationService.searchUsers(query)
@@ -88,13 +115,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "Users found", responses))
     }
 
-    @GetMapping("/search/groups")
-    fun searchGroups(@RequestParam query: String): ResponseEntity<ApiResponse<List<ConversationResponse>>> {
-        val groups = conversationService.searchGroups(query)
-        val responses = groups.map { ConversationResponse(it.id!!, it.type, it.name, it.created_at, it.participants.size) }
-        return ResponseEntity.ok(ApiResponse(true, "Groups found", responses))
-    }
-
+    /**
+     * Récupère toutes les conversations de l'utilisateur courant.
+     */
     @GetMapping("/user")
     fun getUserConversations(
         servletReq: HttpServletRequest
@@ -115,6 +138,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "Conversations retrieved successfully", conversations))
     }
 
+    /**
+     * Récupère les conversations avec messages (chats) de l'utilisateur courant.
+     */
     @GetMapping("/chats")
     fun getUserChats(
         servletReq: HttpServletRequest
@@ -134,6 +160,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "Chats retrieved successfully", conversations))
     }
 
+    /**
+     * Récupère les contacts (conversations sans messages) de l'utilisateur courant.
+     */
     @GetMapping("/contacts")
     fun getUserContacts(
         servletReq: HttpServletRequest
@@ -154,7 +183,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "Contacts retrieved successfully", conversations))
     }
 
-
+    /**
+     * Bloque un participant dans une conversation.
+     */
     @PatchMapping("/participants/block")
     fun blockParticipant(
         servletReq: HttpServletRequest,
@@ -167,6 +198,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "User blocked successfully", null))
     }
 
+    /**
+     * Débloque un participant dans une conversation.
+     */
     @PatchMapping("/participants/deblock")
     fun deblockParticipant(
         servletReq: HttpServletRequest,
@@ -179,6 +213,9 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "User deblocked successfully", null))
     }
 
+    /**
+     * Met à jour le nom d'un groupe.
+     */
     @PutMapping("/{id}/name")
     fun updateGroupName(
         servletReq: HttpServletRequest,
@@ -191,6 +228,10 @@ class ConversationController(
         return ResponseEntity.ok(ApiResponse(true, "Group name updated successfully", null))
     }
 
+    /**
+     * Supprime une conversation.
+     */
+
     @DeleteMapping("/participant")
     fun deleteConversation(
         servletReq: HttpServletRequest,
@@ -202,8 +243,9 @@ class ConversationController(
         conversationService.deleteUserConversation(actorId, request.conversationId,request.targetUserId)
         return ResponseEntity.ok(ApiResponse(true, "Conversation participant removed successfully", null))
     }
-
-    // ---------- helper ----------
+    /**
+     * Récupère l'identifiant de l'utilisateur courant depuis la session.
+     */
     private fun getSessionUserId(servletReq: HttpServletRequest): Int? {
         val raw = servletReq.getSession(false)?.getAttribute("userId") ?: return null
         return when (raw) {

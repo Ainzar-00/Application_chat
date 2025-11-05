@@ -8,12 +8,29 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.time.LocalDateTime
 
+/**
+ * Contrôleur REST pour gérer les messages dans une conversation.
+ *
+ * Les endpoints permettent de :
+ * - Envoyer un message
+ * - Récupérer les messages d'une conversation
+ * - Supprimer un message (utilisateur ou admin)
+ *
+ * La session HTTP est utilisée pour identifier l'utilisateur courant.
+ */
 @RestController
 @RequestMapping("/api/conversations/{conversationId}/messages")
 class MessageController(
     private val conversationService: ConversationService
 ) {
 
+    /**
+     * Envoie un message dans une conversation.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @param conversationId ID de la conversation
+     * @param request contenu du message
+     * @return ResponseEntity avec ApiResponse contenant les détails du message envoyé
+     */
     @PostMapping
     fun sendMessage(
         servletReq: HttpServletRequest,
@@ -41,6 +58,12 @@ class MessageController(
             .body(ApiResponse(true, "Message sent successfully", response))
     }
 
+
+    /**
+     * Récupère tous les messages d'une conversation.
+     * @param conversationId ID de la conversation
+     * @return ResponseEntity avec ApiResponse contenant la liste des messages
+     */
     @GetMapping
     fun getConversationMessages(
         @PathVariable conversationId: Int
@@ -57,6 +80,13 @@ class MessageController(
         return ResponseEntity.ok(ApiResponse(true, "Messages retrieved successfully", messages))
     }
 
+    /**
+     * Supprime un message par son auteur.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @param conversationId ID de la conversation
+     * @param messageId ID du message à supprimer
+     * @return ResponseEntity avec ApiResponse indiquant le succès de l'opération
+     */
     @DeleteMapping("/{messageId}")
     fun deleteMessage(
         servletReq: HttpServletRequest,
@@ -70,6 +100,13 @@ class MessageController(
         return ResponseEntity.ok(ApiResponse(true, "Message deleted successfully", null))
     }
 
+    /**
+     * Supprime un message en tant qu'administrateur.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @param conversationId ID de la conversation
+     * @param messageId ID du message à supprimer
+     * @return ResponseEntity avec ApiResponse indiquant le succès de l'opération
+     */
     @DeleteMapping("/{messageId}/admin")
     fun adminDeleteMessage(
         servletReq: HttpServletRequest,
@@ -83,6 +120,12 @@ class MessageController(
         return ResponseEntity.ok(ApiResponse(true, "Message deleted by admin successfully", null))
     }
 
+
+    /**
+     * Récupère l'identifiant de l'utilisateur courant depuis la session.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @return l'ID de l'utilisateur ou null si non authentifié
+     */
     private fun getSessionUserId(servletReq: HttpServletRequest): Int? {
         val raw = servletReq.getSession(false)?.getAttribute("userId") ?: return null
         return when (raw) {

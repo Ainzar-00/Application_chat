@@ -7,12 +7,27 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+/**
+ * Contrôleur REST pour gérer les participants des conversations.
+ * Les endpoints permettent de :
+ * - Ajouter un participant à une conversation
+ * - Récupérer les participants d'une conversation
+ * - Supprimer un participant d'une conversation
+ * La session HTTP est utilisée pour identifier l'utilisateur courant.
+ */
 @RestController
 @RequestMapping("/api/conversations/{conversationId}/participants")
 class ParticipantController(
     private val conversationService: ConversationService
 ) {
 
+    /**
+     * Ajoute un participant à une conversation.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @param conversationId ID de la conversation
+     * @param request contient l'ID de l'utilisateur à ajouter et son rôle
+     * @return ResponseEntity avec ApiResponse indiquant le succès de l'opération
+     */
     @PostMapping
     fun addParticipant(
         servletReq: HttpServletRequest,
@@ -27,7 +42,11 @@ class ParticipantController(
             .body(ApiResponse(true, "Participant added successfully", null))
     }
 
-
+    /**
+     * Récupère tous les participants d'une conversation.
+     * @param conversationId ID de la conversation
+     * @return ResponseEntity avec ApiResponse contenant la liste des participants
+     */
     @GetMapping
     fun getConversationParticipants(
         @PathVariable conversationId: Int
@@ -46,6 +65,13 @@ class ParticipantController(
         return ResponseEntity.ok(ApiResponse(true, "Participants retrieved successfully", participants))
     }
 
+    /**
+     * Supprime un participant d'une conversation.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @param conversationId ID de la conversation
+     * @param targetUserId ID de l'utilisateur à supprimer
+     * @return ResponseEntity avec ApiResponse indiquant le succès de l'opération
+     */
     @DeleteMapping("/{targetUserId}")
     fun removeParticipant(
         servletReq: HttpServletRequest,
@@ -59,6 +85,11 @@ class ParticipantController(
         return ResponseEntity.ok(ApiResponse(true, "Participant removed successfully", null))
     }
 
+    /**
+     * Récupère l'identifiant de l'utilisateur courant depuis la session.
+     * @param servletReq requête HTTP pour accéder à la session
+     * @return l'ID de l'utilisateur ou null si non authentifié
+     */
     private fun getSessionUserId(servletReq: HttpServletRequest): Int? {
         val raw = servletReq.getSession(false)?.getAttribute("userId") ?: return null
         return when (raw) {

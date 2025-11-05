@@ -1,1 +1,2 @@
-rootProject.name = "demo"
+rootProject.name = "chatapp"
+include(":app")
