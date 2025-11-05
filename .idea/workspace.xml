@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86726266-0ac9-4052-9274-9a1b65eee8b8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinNotebook.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.chatapp.demo.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wechat.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ConversationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ConversationController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/MessageController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/MessageController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ParticipantController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/ParticipantController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/userController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/userController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/websocketcontroller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/controller/websocketcontroller.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation_partcipant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/conversation_partcipant.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message_text.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/model/message_text.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversatioParticipantRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversatioParticipantRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversationRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/ConversationRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/MessageRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/MessageRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/UserRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/respository/UserRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/ConversationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/ConversationService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp/src/main/kotlin/com/chatapp/demo/service/UserService.kt" afterDir="false" />
-    </list>
+    <list default="true" id="86726266-0ac9-4052-9274-9a1b65eee8b8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
