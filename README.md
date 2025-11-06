@@ -129,7 +129,7 @@ DELETE	/api/conversations/{conversationId}/messages/{messageId}/admin	Delete a m
 
 ## Auteur 
 
-*Youness Ainzar* - Projet Back-End Kotlin/Spring Boot 
+*Youness Ainzar*/*Mohamed lamaafer* - Projet Back-End Kotlin/Spring Boot 
  
 ## Date 
 1 November 2025
